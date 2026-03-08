@@ -1,0 +1,40 @@
+# Claude Code
+CLAUDE.md
+.claude/
+
+# OMC state
+.omc/
+
+# VGGT model code (cloned from official repo, not redistributed)
+vggt/
+vggt-original/
+visual_util.py
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Temporary frames
+_frames_tmp/
+
+# Videos (raw demo footage)
+videos/
+
+# Model outputs
+*.glb
+*.usdz
+*.ply
+*.bin
+render_*.png
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Xcode
+VGGTViewer/VGGTViewer.xcodeproj/xcuserdata/
+VGGTViewer/VGGTViewer.xcodeproj/project.xcworkspace/xcuserdata/
