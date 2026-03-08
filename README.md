@@ -9,6 +9,9 @@ Reconstruct 3D point clouds from RGB video using [VGGT (Visual Geometry Grounded
 <p align="center">
   <em>Left: Point cloud only &nbsp;|&nbsp; Right: Mixed reality (passthrough)</em>
 </p>
+<p align="center">
+  <a href="https://youtu.be/iDad7aC0h2U">Full demo video</a>
+</p>
 
 ## Overview
 
