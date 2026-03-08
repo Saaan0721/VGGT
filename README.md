@@ -47,7 +47,7 @@ VGGT/
 ### Step 1: Clone This Repository
 
 ```bash
-git clone https://github.com/<your-username>/VGGT.git
+git clone https://github.com/Saaan0721/VGGT.git
 cd VGGT
 ```
 
