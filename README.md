@@ -71,6 +71,7 @@ rm -rf vggt-upstream
 ```
 
 After this step, verify your directory contains:
+
 - `vggt/models/vggt.py` — VGGT model definition
 - `vggt/utils/load_fn.py` — image loading and preprocessing
 - `vggt/utils/pose_enc.py` — pose encoding to extrinsic/intrinsic
@@ -103,6 +104,7 @@ If this prints `Setup OK`, you're ready to go.
 Record a video of the target scene or object using any camera (including Vision Pro's built-in camera).
 
 **Tips for best results:**
+
 - Move slowly and steadily
 - Capture from multiple angles
 - Ensure good lighting
@@ -120,16 +122,16 @@ python process_video.py ./images/ -o scene.glb
 
 #### Options
 
-| Option | Default | Description |
-|--------|---------|-------------|
-| `--output, -o` | `scene.usdz` | Output file path (.glb or .usdz) |
-| `--fps-interval` | `1.0` | Frame extraction interval in seconds |
-| `--conf-threshold` | `50.0` | Confidence percentile filter (higher = fewer but more accurate points) |
-| `--device` | `cuda` | Device (`cuda` or `cpu`) |
-| `--brightness` | `1.0` | Brightness multiplier |
-| `--saturation` | `1.0` | Saturation multiplier |
-| `--mask-black` | off | Mask out black background pixels |
-| `--export-ply` | off | Also export PLY file |
+| Option             | Default      | Description                                                            |
+| ------------------ | ------------ | ---------------------------------------------------------------------- |
+| `--output, -o`     | `scene.usdz` | Output file path (.glb or .usdz)                                       |
+| `--fps-interval`   | `1.0`        | Frame extraction interval in seconds                                   |
+| `--conf-threshold` | `50.0`       | Confidence percentile filter (higher = fewer but more accurate points) |
+| `--device`         | `cuda`       | Device (`cuda` or `cpu`)                                               |
+| `--brightness`     | `1.0`        | Brightness multiplier                                                  |
+| `--saturation`     | `1.0`        | Saturation multiplier                                                  |
+| `--mask-black`     | off          | Mask out black background pixels                                       |
+| `--export-ply`     | off          | Also export PLY file                                                   |
 
 ```bash
 # Finer sampling with higher confidence threshold
@@ -185,13 +187,13 @@ open VGGTViewer/VGGTViewer.xcodeproj
 
 #### AR Controls
 
-| Control | Method |
-|---------|--------|
-| Position (L/R, Height, Depth) | +/- buttons in UI |
-| Rotation | Pitch/Roll buttons, or drag gesture on point cloud |
-| Scale | Scale buttons, or pinch gesture |
-| Background opacity | Slider (0% = full passthrough, 100% = black) |
-| Save/Reset | Persist or reset view settings |
+| Control                       | Method                                             |
+| ----------------------------- | -------------------------------------------------- |
+| Position (L/R, Height, Depth) | +/- buttons in UI                                  |
+| Rotation                      | Pitch/Roll buttons, or drag gesture on point cloud |
+| Scale                         | Scale buttons, or pinch gesture                    |
+| Background opacity            | Slider (0% = full passthrough, 100% = black)       |
+| Save/Reset                    | Persist or reset view settings                     |
 
 > Enable the **Gesture** toggle to interact with the point cloud directly via drag (rotate) and pinch (scale) gestures.
 
@@ -225,14 +227,14 @@ python view_3d.py scene.glb
 
 ## Troubleshooting
 
-| Issue | Solution |
-|-------|----------|
-| `ModuleNotFoundError: No module named 'vggt'` | Run Setup Step 2 — copy `vggt/` from the official repo |
-| `ImportError: cannot import name 'predictions_to_glb'` | Run Setup Step 2 — copy `visual_util.py` from the official repo |
-| CUDA out of memory | Reduce input frames with `--fps-interval 2.0` or higher |
-| USDZ conversion fails | Requires macOS `xcrun usdz_converter`; falls back to GLB which also works on Vision Pro |
-| Point cloud looks sparse | Lower `--conf-threshold` (e.g., 30) to keep more points |
-| Colors look dark | Use `--brightness 1.3 --saturation 1.5` |
+| Issue                                                  | Solution                                                                                |
+| ------------------------------------------------------ | --------------------------------------------------------------------------------------- |
+| `ModuleNotFoundError: No module named 'vggt'`          | Run Setup Step 2 — copy `vggt/` from the official repo                                  |
+| `ImportError: cannot import name 'predictions_to_glb'` | Run Setup Step 2 — copy `visual_util.py` from the official repo                         |
+| CUDA out of memory                                     | Reduce input frames with `--fps-interval 2.0` or higher                                 |
+| USDZ conversion fails                                  | Requires macOS `xcrun usdz_converter`; falls back to GLB which also works on Vision Pro |
+| Point cloud looks sparse                               | Lower `--conf-threshold` (e.g., 30) to keep more points                                 |
+| Colors look dark                                       | Use `--brightness 1.3 --saturation 1.5`                                                 |
 
 ## License
 
@@ -242,7 +244,7 @@ This project's own code (`process_video.py`, `VGGTViewer/`, utility scripts) is 
 
 ## Acknowledgments
 
-Built at [Intelligent Systems Lab (ISL)](https://isl.snu.ac.kr/), Seoul National University.
+Built at [Information Systems Lab (ISL)](https://isl.snu.ac.kr/), Seoul National University.
 
 Contact: [skim@islab.snu.ac.kr](mailto:skim@islab.snu.ac.kr)
 
